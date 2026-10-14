@@ -1,4 +1,4 @@
-# HackScout
+﻿# HackScout
 
 A personal hackathon radar. It searches the live web for hackathons that fit your profile, fetches each page,
 extracts the key facts, checks every claim against the page text, and pops up new matches with a link to the
@@ -88,7 +88,7 @@ Start it:
 python -m uvicorn app.main:app --reload
 ```
 
-Check it at http://127.0.0.1:8000/api/health and http://127.0.0.1:8000/api/gemini-check.
+Check it at http://127.0.0.1:8001/api/health and http://127.0.0.1:8001/api/gemini-check.
 
 - `event_extraction_provider` should be `gemini` and `paid_tinyfish_agent_enabled` should be `false`.
 - `/api/gemini-check` tests each Gemini model and prints the exact reason if one fails.
@@ -146,3 +146,4 @@ Never commit `.env`. The `.gitignore` already excludes it, plus the local databa
 - **No invented deadlines.** If nothing on the page supports a date, the UI says "Not verified".
 - **No popup spam.** Only genuinely new matches open the popup; saved and dismissed events never reopen it.
 - **Applications stay on the official site.** HackScout links to the original listing; it never applies for you.
+
