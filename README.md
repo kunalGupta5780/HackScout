@@ -85,7 +85,7 @@ GEMINI_API_KEY=...        # https://aistudio.google.com/apikey  (free, no card)
 Start it:
 
 ```bash
-python -m uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload --port 8001
 ```
 
 Check it at http://127.0.0.1:8001/api/health and http://127.0.0.1:8001/api/gemini-check.
@@ -146,4 +146,5 @@ Never commit `.env`. The `.gitignore` already excludes it, plus the local databa
 - **No invented deadlines.** If nothing on the page supports a date, the UI says "Not verified".
 - **No popup spam.** Only genuinely new matches open the popup; saved and dismissed events never reopen it.
 - **Applications stay on the official site.** HackScout links to the original listing; it never applies for you.
+
 
