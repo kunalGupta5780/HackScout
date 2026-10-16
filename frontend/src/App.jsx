@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Activity, ArrowDownRight, ArrowUpRight, Bell, Bookmark, Check, ChevronDown, CircleHelp, Clock3, ExternalLink, FileText, Filter, Globe2, History, Layers3, LoaderCircle, MapPin, Radio, RefreshCw, Search, Settings2, ShieldCheck, Sparkles, Target, Trash2, Upload, X } from 'lucide-react';
 
-const API = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001';
+const API = import.meta.env.VITE_API_URL ?? '';
 const dateLabel = (date) => date ? new Date(`${date}T00:00:00`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Not verified';
 const verificationLabel = (status) => ({ demo: 'Demo data', page_fetched: 'Page fetched', search_result: 'Search result only' }[status] || 'Not verified');
 const registrationStatusLabel = (status) => ({ open: 'Open', closed: 'Closed', closing_today: 'Deadline today', unknown: 'Status unknown' }[status] || 'Status unknown');
